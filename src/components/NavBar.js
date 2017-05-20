@@ -1,16 +1,11 @@
 import React from 'react'
 
 function NavBar(props){
-  const colors = {
-    black: 'navbar-inverse',
-    white: 'navbar-default'
-  }
-  colors['black']
   return (
-    <nav className={`navbar ${colors[props.color]}`}>
+    <nav className={ 'navbar deep-purple accent-2' }>
       <div className='container-fluid'>
         <div className='navbar-header'>
-          <a className='navbar-brand'>
+          <a className='brand-logo center'>
             { props.title }
           </a>
         </div>
