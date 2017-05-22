@@ -4,7 +4,7 @@ import GifSearch from '../components/GifSearch.js'
 import fetchGifs from '../api/index.js'
 
 class GifListContainer extends React.Component {
-  constructor() {
+  constructor(){
     super()
     this.state = {
       gifs: [],
@@ -21,26 +21,27 @@ class GifListContainer extends React.Component {
     })
   }
 
-  handleSubmit(e){
-    console.log("submitted!!")
-    e.preventDefault()
+  handleSubmit(event){
+    event.preventDefault()
     fetchGifs(this.state.query)
-    .then(data => this.setState({
-      gifs: (data.data.map(gif => gif.images.fixed_height.url)).slice(0,3)
-    }))
-    .catch(error => console.log('error is', error));
+      .then(data => this.setState({
+        gifs: (data.data.map(gif => gif.images.fixed_height.url)).slice(0,11)
+      }))
+      .then(data => this.setState({
+        query: ''
+      }))
+      .catch(error => console.log('error is', error))
   }
 
 
   render(){
-    console.log(this.state.query)
     return (
       <div className="container">
         <div className="row">
-          <div className="col s6">
+          <div className="col s4">
             < GifSearch query={this.state.query} handleChange={this.handleChange} handleSubmit={this.handleSubmit} />
           </div>
-          <div className="col s6">
+          <div className="col s8">
             < GifList gifList={this.state.gifs} />
           </div>
         </div>

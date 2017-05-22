@@ -17,6 +17,7 @@
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.7",
+    "materialize-css": "^0.98.2",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },

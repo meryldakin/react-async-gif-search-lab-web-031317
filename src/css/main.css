@@ -1,0 +1,18 @@
+h1 {
+  font-family: 'Barrio', cursive;
+  font-size: 200%;
+}
+
+.brand-logo {
+  font-family: 'Julius Sans One', sans-serif;
+}
+
+.container {
+  margin-top: 25px;
+}
+
+.live-typing {
+  margin-top: 50px;
+  font-size:60px;
+  font-family: 'Julius Sans One', sans-serif;
+}
